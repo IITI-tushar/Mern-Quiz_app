@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: black;
+  font-size: larger;
+  background-color: #f4f4f4; /* Light grey background */
+  background-image: url(../public/bg_quiz.avif);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full height of the viewport */
+  text-align: center; /* Center text alignment */
+  padding: 20px; /* Add padding */
+}
+
+h1 {
+  font-size: 2.5em; /* Large font size for main heading */
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+h2 {
+  font-size: 2em; /* Slightly smaller for subheadings */
+  margin-top: 20px; /* Space above the subheading */
+}
+
+button {
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white; /* White text */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Padding inside the button */
+  font-size: 1em; /* Button font size */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
