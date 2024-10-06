@@ -47,7 +47,7 @@ const App = () => {
     return (
         <div className="App">
             <h1>Quiz Application</h1>
-            {location.pathname !== '/create-quiz' && (
+            {location.pathname !== '/create-quiz' && !location.pathname.startsWith('/quiz/') && (
                 <Link to="/create-quiz">
                     <button>Create Quiz</button>
                 </Link>
