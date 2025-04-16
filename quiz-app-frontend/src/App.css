@@ -2,32 +2,34 @@
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f5f5f5e5;
-  background-image: none;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  background-image: linear-gradient(to bottom right, #f5f5f5, #e0e0e0);
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', sans-serif;
 }
 
 h1 {
   text-align: center;
   color: #333;
   margin-bottom: 20px;
+  font-size: 2.5rem;
 }
 
 button {
-  background-color: #4CAF50;
+  background-color: #007bff;
   color: white;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 12px 24px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
   margin-bottom: 20px;
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #0056b3;
+  transform: scale(1.05);
 }
 
 .link {
@@ -50,6 +52,24 @@ button:hover {
   margin-top: 20px;
 }
 
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+nav a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #0056b3;
+}
+
 @media (max-width: 400px) {
   .App {
     padding: 10px;
@@ -57,10 +77,10 @@ button:hover {
   }
 
   h1 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
   button {
-    padding: 8px 10px;
+    padding: 10px 15px;
   }
 }

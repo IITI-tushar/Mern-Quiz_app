@@ -7,6 +7,7 @@ import TakeQuiz from './components/TakeQuiz';
 import Register from './components/Register';
 import Login from './components/Login';
 import Profile from './components/Profile';
+import QuizAnalytics from './components/QuizAnalytics';
 import './App.css';
 
 const App = () => {
@@ -59,6 +60,7 @@ const App = () => {
                 <Link to="/register">Register</Link>
                 <Link to="/login">Login</Link>
                 <Link to="/profile">Profile</Link>
+                <Link to="/quiz-analytics">Quiz Analytics</Link>
             </nav>
             <Routes>
                 <Route path="/" element={<QuizList quizzes={quizzes} />} />
@@ -67,6 +69,7 @@ const App = () => {
                 <Route path="/register" element={<Register />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/profile" element={<Profile />} />
+                <Route path="/quiz-analytics" element={<QuizAnalytics />} />
             </Routes>
         </div>
     );
