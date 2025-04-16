@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react
 import QuizList from './components/QuizList';
 import CreateQuiz from './components/CreateQuiz';
 import TakeQuiz from './components/TakeQuiz';
+import Register from './components/Register';
+import Login from './components/Login';
+import Profile from './components/Profile';
 import './App.css';
 
 const App = () => {
@@ -52,10 +55,18 @@ const App = () => {
                     <button>Create Quiz</button>
                 </Link>
             )}
+            <nav>
+                <Link to="/register">Register</Link>
+                <Link to="/login">Login</Link>
+                <Link to="/profile">Profile</Link>
+            </nav>
             <Routes>
                 <Route path="/" element={<QuizList quizzes={quizzes} />} />
                 <Route path="/quiz/:id" element={<TakeQuiz />} />
                 <Route path="/create-quiz" element={<CreateQuiz onSubmit={handleQuizSubmission} />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/profile" element={<Profile />} />
             </Routes>
         </div>
     );
