@@ -3,15 +3,18 @@
   max-width: 700px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f9f9f9;
-  opacity: 0.9;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  background-image: linear-gradient(to bottom right, #f5f5f5, #e0e0e0);
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', sans-serif;
 }
 
 h2 {
   text-align: center;
   color: #333;
+  margin-bottom: 20px;
+  font-size: 2rem;
 }
 
 label {
@@ -24,10 +27,10 @@ label {
 input[type="text"],
 textarea {
   width: 90%;
-  padding: 10px;
+  padding: 12px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 8px;
   font-size: 16px;
 }
 
@@ -36,22 +39,23 @@ input[type="checkbox"] {
 }
 
 button {
-  background-color: #4CAF50;
+  background-color: #007bff;
   color: white;
   border: none;
-  padding: 10px 15px;
+  padding: 12px 24px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   margin: 5px 2px;
   cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s;
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #0056b3;
+  transform: scale(1.05);
 }
 
 .add-question-button {
@@ -65,4 +69,51 @@ button:hover {
 .error {
   color: red;
   font-size: 14px;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.textarea-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  resize: vertical;
+}
+
+.question-block {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.answer-option {
+  margin-bottom: 10px;
+}
+
+.submit-button {
+  background-color: #4CAF50;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
 }

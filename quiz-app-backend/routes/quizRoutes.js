@@ -1,8 +1,9 @@
 const express = require('express');
 const Quiz = require('../models/Quiz');
 const router = express.Router();
+const authenticateJWT = require('../middleware/authenticateJWT'); // JWT authentication middleware
 
-router.post('/', async (req, res) => {
+router.post('/', authenticateJWT, async (req, res) => {
     const { title, description, questions } = req.body;
 
     const existingQuiz = await Quiz.findOne({ title });

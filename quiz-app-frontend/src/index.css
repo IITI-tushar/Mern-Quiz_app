@@ -45,3 +45,34 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* New styles for a more modern and sleek look */
+body {
+  background-color: #f0f2f5; /* Light grey background */
+  color: #333; /* Darker text color */
+}
+
+h1, h2 {
+  font-family: 'Roboto', sans-serif; /* Modern font */
+  color: #333; /* Darker text color */
+}
+
+button {
+  background-color: #007bff; /* Primary color */
+  color: white; /* White text */
+  border: none; /* Remove border */
+  border-radius: 8px; /* More rounded corners */
+  padding: 12px 24px; /* More padding */
+  font-size: 1.1em; /* Slightly larger font size */
+  cursor: pointer; /* Change cursor on hover */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+code {
+  font-family: 'Fira Code', monospace; /* Modern monospace font */
+}

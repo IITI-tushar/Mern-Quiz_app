@@ -13,7 +13,9 @@ const CreateQuiz = ({ onSubmit }) => {
                 { text: '', isCorrect: false },
                 { text: '', isCorrect: false },
                 { text: '', isCorrect: false }
-            ]
+            ],
+            questionType: 'multiple-choice',
+            media: { image: '', video: '', audio: '' }
         }
     ]);
     const [errorMessage, setErrorMessage] = useState('');
@@ -41,9 +43,17 @@ const CreateQuiz = ({ onSubmit }) => {
                     { text: '', isCorrect: false },
                     { text: '', isCorrect: false },
                     { text: '', isCorrect: false }
-                ]
+                ],
+                questionType: 'multiple-choice',
+                media: { image: '', video: '', audio: '' }
             }
         ]);
+    };
+
+    const handleMediaChange = (index, type, value) => {
+        const newQuestions = [...questions];
+        newQuestions[index].media[type] = value;
+        setQuestions(newQuestions);
     };
 
     const handleSubmitQuiz = async (e) => {
@@ -119,6 +129,50 @@ const CreateQuiz = ({ onSubmit }) => {
                             required
                             className="input-field"
                         />
+                        <div className="form-group">
+                            <label htmlFor={`questionType${qIndex}`}>Question Type</label>
+                            <select
+                                id={`questionType${qIndex}`}
+                                value={question.questionType}
+                                onChange={(e) => handleQuestionChange(qIndex, 'questionType', e.target.value)}
+                                className="input-field"
+                            >
+                                <option value="multiple-choice">Multiple Choice</option>
+                                <option value="true-false">True/False</option>
+                                <option value="fill-in-the-blank">Fill in the Blank</option>
+                                <option value="matching">Matching</option>
+                            </select>
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor={`image${qIndex}`}>Image URL</label>
+                            <input
+                                id={`image${qIndex}`}
+                                type="text"
+                                value={question.media.image}
+                                onChange={(e) => handleMediaChange(qIndex, 'image', e.target.value)}
+                                className="input-field"
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor={`video${qIndex}`}>Video URL</label>
+                            <input
+                                id={`video${qIndex}`}
+                                type="text"
+                                value={question.media.video}
+                                onChange={(e) => handleMediaChange(qIndex, 'video', e.target.value)}
+                                className="input-field"
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor={`audio${qIndex}`}>Audio URL</label>
+                            <input
+                                id={`audio${qIndex}`}
+                                type="text"
+                                value={question.media.audio}
+                                onChange={(e) => handleMediaChange(qIndex, 'audio', e.target.value)}
+                                className="input-field"
+                            />
+                        </div>
                         {question.answerOptions.map((option, aIndex) => (
                             <div key={aIndex} className="answer-option">
                                 <label htmlFor={`answer${qIndex}-${aIndex}`}>Answer {aIndex + 1}</label>
